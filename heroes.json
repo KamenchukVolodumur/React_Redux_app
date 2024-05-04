@@ -1,0 +1,32 @@
+{
+  "heroes": [
+    {
+      "id": "1",
+      "name": "Первый герой",
+      "description": "Первый герой в рейтинге!",
+      "element": "fire"
+    }
+  ],
+  "filters": [
+    {
+      "name": "all",
+      "id": "762e"
+    },
+    {
+      "name": "fire",
+      "id": "f41e"
+    },
+    {
+      "name": "water",
+      "id": "d918"
+    },
+    {
+      "name": "wind",
+      "id": "c5b3"
+    },
+    {
+      "name": "earth",
+      "id": "343a"
+    }
+  ]
+}
