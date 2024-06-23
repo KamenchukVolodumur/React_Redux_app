@@ -1,12 +1,14 @@
 import img from "../../assets/hero.png"
 import { useDispatch, useSelector } from 'react-redux';
 import { useCallback } from "react";
-import { heroesFetching, heroesFetched, heroesFetchingError, delate } from '../../actions';
+import {  heroDeleted } from '../../reducers/heroesSlice';
 import {useHttp} from '../../hooks/http.hook';
 const HeroesListItem = ({name, description, element, id}) => {
+    const {heroes}= useSelector(state=>state.heroes)
     const dispatch = useDispatch();
     let elementClassName;
     const {request} = useHttp();
+    console.log(element, id)
     switch (element) {
         case 'fire':
             elementClassName = 'bg-danger bg-gradient';
@@ -25,12 +27,13 @@ const HeroesListItem = ({name, description, element, id}) => {
     }
     const onDelete = useCallback((id) => {
         // Удаление персонажа по его id
+        console.log(id)
         request(`http://localhost:3001/heroes/${id}`, "DELETE")
             .then(data => console.log(data, 'Deleted'))
-            .then(dispatch(delate(id)))
+            .then(dispatch(heroDeleted(id)))
             .catch(err => console.log(err));
         // eslint-disable-next-line  
-    }, [request]);
+    }, []);
     return (
         <li 
             className={`card flex-row mb-4 shadow-lg text-white ${elementClassName}`}>

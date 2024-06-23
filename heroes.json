@@ -1,32 +1,48 @@
 {
   "heroes": [
     {
-      "id": "1",
-      "name": "Первый герой",
-      "description": "Первый герой в рейтинге!",
-      "element": "fire"
+      "id": "3e8b1d86-5ae7-4437-90cd-49de5d847201",
+      "name": "Maksum Klumkovuch",
+      "description": "qdqwd",
+      "element": "earth"
+    },
+    {
+      "id": "f3eb52be-9712-4fe1-a51a-fd7767119082",
+      "name": "Maksum Klumkovuch",
+      "description": "dqwdqd",
+      "element": "water"
     }
   ],
   "filters": [
     {
+      "id": "762e",
+      "className": "btn-outline-dark",
       "name": "all",
-      "id": "762e"
+      "label": "Всі"
     },
     {
+      "id": "f41e",
+      "className": "btn-danger",
       "name": "fire",
-      "id": "f41e"
+      "label": "Вогонь"
     },
     {
+      "id": "d918",
+      "className": "btn-primary",
       "name": "water",
-      "id": "d918"
+      "label": "Вода"
     },
     {
+      "id": "c5b3",
+      "className": "btn-success",
       "name": "wind",
-      "id": "c5b3"
+      "label": "Вітер"
     },
     {
+      "id": "343a",
+      "className": "btn-secondary",
       "name": "earth",
-      "id": "343a"
+      "label": "Земля"
     }
   ]
 }

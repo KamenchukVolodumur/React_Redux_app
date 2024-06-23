@@ -5,7 +5,8 @@ import { useHttp } from '../../hooks/http.hook';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { heroesFetching, heroesFetched, heroesFetchingError, delate, add } from '../../actions';
+import { heroCreated,} from '../../reducers/heroesSlice';
+import { fetchHeroes } from '../../reducers/heroesSlice';
 // Задача для этого компонента:
 // Реализовать создание нового героя с введенными данными. Он должен попадать
 // в общее состояние и отображаться в списке + фильтроваться
@@ -27,8 +28,8 @@ const HeroesAddForm = () => {
             element: values.element
         }
         request(`http://localhost:3001/heroes`, "POST", JSON.stringify(hero))
-            .then(dispatch(add(hero)))
-            .catch(err => console.log(err));
+            .then(dispatch(heroCreated(hero)))
+            .then(dispatch(fetchHeroes()))
     }
     
     return (
